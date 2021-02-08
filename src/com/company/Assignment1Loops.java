@@ -1,48 +1,46 @@
 package com.company;
 
-import java.util.Scanner;
-
 public class Assignment1Loops {
 
     public static void main(String[] args) {
 
-        int[] santasArray = new int[]{5, 3, 7, 6, 2, 8};
-        forLoop(santasArray);
-        forEachLoop(santasArray);
-        whileLoop(santasArray);
-        doWhileLoop(santasArray);
+        int[] arr = new int[]{5, 3, 7, 6, 2, 8};
+        forLoop(arr);
+        forEachLoop(arr);
+        whileLoop(arr);
+        doWhileLoop(arr);
     }
 
-    public static void forLoop(int[] santasArray) {
+    public static void forLoop(int[] array) {
 
-        for (int i = 0; i < santasArray.length; i++) {
-            System.out.println("FOR Loop: " + i + "[" + santasArray[i] + "]");
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("FOR Loop: " + i + "[" + array[i] + "]");
         }
     }
 
-    public static void forEachLoop(int[] santasArray1) {
+    public static void forEachLoop(int[] array1) {
 
-        for (int tempVar : santasArray1) {
+        for (int tempVar : array1) {
             System.out.println("For EACH Loop: " + tempVar);
         }
-        //santasArray1[1]=42; experiment
+        //array1[1]=42; experiment
     }
 
-    public static void whileLoop(int[] santasArray2) {
+    public static void whileLoop(int[] array2) {
 
         int i = 0;
-        while(i < santasArray2.length) {
-            System.out.println("WHILE Loop: " + santasArray2[i]);
+        while(i < array2.length) {
+            System.out.println("WHILE Loop: " + array2[i]);
             i++;
         }
     }
 
-    public static void doWhileLoop(int[] santasArray3) {
+    public static void doWhileLoop(int[] array3) {
 
         int i = 0;
         do {
-            System.out.println("DO WHILE Loop: " + santasArray3[i]);
+            System.out.println("DO WHILE Loop: " + array3[i]);
             i++;
-        } while(i < santasArray3.length);
+        } while(i < array3.length);
     }
 }
