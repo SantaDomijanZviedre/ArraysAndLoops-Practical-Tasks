@@ -3,78 +3,50 @@ package com.company;
 public class Assignment2LoopsXX {
 
     public static void main(String[] args)
+
     {
         int[] arrayTenElements = new int[]{10, 4, -4, 7, 0, 9, 1, 3, 7, -5};
-
-        int[] arrayTen = arrayTenElements;
-
-        analyseArray();
+        System.out.println(analyseArray(arrayTenElements));
     }
 
-    public static int analyseArray(int negativeElements, int oddElements, int countOddElements,
-                                   int sameValueElements, int eachSecondElement, int averageValueOfArray,
-                                   int smallerThanAverage)
+    public static boolean analyseArray(int[] arrayTenElements)
     {
-        int arrayTenElements = 0;
-
-        for (int arrayTen[] : arrayTenElements)
+        for (int num : arrayTenElements)
         {
-            negativeElements(arrayTen);
-            oddElements(arrayTen);
-            countOddElements(arrayTen);
-            sameValueElements(arrayTen);
-            eachSecondElement(arrayTen);
-            averageValueOfArray(arrayTen);
-            smallerThanAverage(arrayTen);
+           negativeElements(num);
+           oddElements(num);
+           countOddElements(num);
         }
-        return negativeElements;
-        return oddElements;
-        return countOddElements;
-        return sameValueElements;
-        return eachSecondElement;
-        return averageValueOfArray;
-        return smallerThanAverage;
+        return true;
     }
 
-    public static void negativeElements(int[] arrayTen) {
+    public static void negativeElements(int num) {
 
-        System.out.println("Negative elements of array: ");
-        for (int num :  arrayTen) {
-            if (num < 0);
+            if (num < 0)
             System.out.println(num);
-        }
-        //return num;
     }
 
-    public static void oddElements(int[] arrayTen) {
+    public static void oddElements(int num) {
 
-        System.out.println("Odd elements of array: ");
-        for (int num : arrayTen) {
             if (num % 2 != 0)
                 System.out.println(num);
-        }
     }
 
-    public static void countOddElements(int[] arrayTen) {
-
-        System.out.println("Count of Odd elements of array: ");
+    public static int countOddElements(int num) {
 
         int countOdd = 0;
-        for (int num : arrayTen) {
-            //countOdd += Math.abs(num % 2);
             if (num % 2 != 0) {
                 countOdd++;
             }
-        }
-        System.out.println(countOdd);
+        return countOdd;
     }
 
-    public static void sameValueElements(int[] arrayTen) {
+   /* public static void sameValueElements(int[] arrayTen) {
 
         int i;
-        for(i = 0; i < arrayTen.length; i++) {
+        //for(i = 0; i < arrayTen.length; i++) {
             int j;
-            for(j = i+1; j < arrayTen.length; j++) {
+          //  for(j = i+1; j < arrayTen.length; j++) {
                 if(arrayTen[i]==arrayTen[j])
                 {
                     System.out.println("There are the following elements with same value: " + arrayTen[i]);
@@ -116,5 +88,5 @@ public class Assignment2LoopsXX {
             }
         }
         System.out.println("There are " + countSmallerAvg + " elements smaller than average.");
-    }
+    }*/
 }
